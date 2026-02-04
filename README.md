@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 ![Allure Report Overview](allure-overview.png)
 
 ## 📋 Описание проекта
@@ -92,10 +95,17 @@ selenide-allure-demoqa/
 ### Базовый тестовый класс
 \`\`\`java
 public abstract class BaseTest {
+<<<<<<< HEAD
 @BeforeAll
 static void setUpAllureAndSelenide() {
 Configuration.browserSize = "1920x1080";
 Configuration.baseUrl = "https://demoqa.com";
+=======
+    @BeforeAll
+    static void setUpAllureAndSelenide() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
+>>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
             .screenshots(true)
@@ -108,11 +118,19 @@ Configuration.baseUrl = "https://demoqa.com";
 ### Page Object для Text Box
 \`\`\`java
 public class TextBoxPage {
+<<<<<<< HEAD
 private final SelenideElement fullNameInput = $("#userName");
 private final SelenideElement emailInput = $("#userEmail");
 private final SelenideElement currentAddressTextarea = $("#currentAddress");
 private final SelenideElement permanentAddressTextarea = $("#permanentAddress");
 private final SelenideElement submitButton = $("#submit");
+=======
+    private final SelenideElement fullNameInput = $("#userName");
+    private final SelenideElement emailInput = $("#userEmail");
+    private final SelenideElement currentAddressTextarea = $("#currentAddress");
+    private final SelenideElement permanentAddressTextarea = $("#permanentAddress");
+    private final SelenideElement submitButton = $("#submit");
+>>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 
     public TextBoxPage fillFullName(String name) {
         fullNameInput.setValue(name);
@@ -149,6 +167,7 @@ private final SelenideElement submitButton = $("#submit");
 \`\`\`java
 @Test
 void fillFormTest() {
+<<<<<<< HEAD
 new TextBoxPage()
 .open("/text-box")
 .fillFullName("Mr. Anderson")
@@ -156,6 +175,15 @@ new TextBoxPage()
 .fillCurrentAddress("Moscow")
 .fillPermanentAddress("Perm")
 .submit();
+=======
+    new TextBoxPage()
+        .open("/text-box")
+        .fillFullName("Mr. Anderson")
+        .fillEmail("mr.anderson@example.com")
+        .fillCurrentAddress("Moscow")
+        .fillPermanentAddress("Perm")
+        .submit();
+>>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 
     assertThat(new TextBoxPage().getOutputName())
         .isEqualTo("Name:Mr. Anderson");
@@ -185,9 +213,15 @@ new TextBoxPage()
 Основные настройки проекта:
 \`\`\`xml
 <properties>
+<<<<<<< HEAD
 <maven.compiler.source>21</maven.compiler.source>
 <maven.compiler.target>21</maven.compiler.target>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+=======
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+>>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 </properties>
 
 <dependencies>
