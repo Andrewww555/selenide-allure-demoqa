@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> b64c78cfe83449b002f950b298fe1e91dcc79c38
 ![Allure Report Overview](allure-overview.png)
 
 ## 📋 Описание проекта
