@@ -105,13 +105,13 @@ Configuration.baseUrl = "https://demoqa.com";
 \`\`\`
 
 ### Page Object для Text Box
-\`\`\`java
+```java
 public class TextBoxPage {
-private final SelenideElement fullNameInput = $("#userName");
-private final SelenideElement emailInput = $("#userEmail");
-private final SelenideElement currentAddressTextarea = $("#currentAddress");
-private final SelenideElement permanentAddressTextarea = $("#permanentAddress");
-private final SelenideElement submitButton = $("#submit");
+    private final SelenideElement fullNameInput = $("#userName");
+    private final SelenideElement emailInput = $("#userEmail");
+    private final SelenideElement currentAddressTextarea = $("#currentAddress");
+    private final SelenideElement permanentAddressTextarea = $("#permanentAddress");
+    private final SelenideElement submitButton = $("#submit");
 
     public TextBoxPage fillFullName(String name) {
         fullNameInput.setValue(name);
@@ -142,7 +142,7 @@ private final SelenideElement submitButton = $("#submit");
         return $("#name").text();
     }
 }
-\`\`\`
+```
 
 ### Тест с проверкой
 \`\`\`java
